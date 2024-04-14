@@ -158,10 +158,6 @@ vendor.sys.thermal.data.path=/data/vendor/thermal/
 # Time Service
 persist.timed.enable=true
 
-# WFD Settings
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
-
 # WiFi
 config.disable_rtt=true
 
