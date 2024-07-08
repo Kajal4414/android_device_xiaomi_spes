@@ -127,7 +127,9 @@ persist.data.wda.enable=true
 persist.rmnet.data.enable=true
 
 # Skia
+debug.hwui.renderer=skiagl
 debug.hwui.skia_atrace_enabled=false
+debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 
 # Time-services
