@@ -4,26 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
+# APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Include GSI
+# GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
-# Enable Virtual A/B
+# A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
-
-# Enable Dynamic partition
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# API level
-PRODUCT_SHIPPING_API_LEVEL := 30
-
-# A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -39,6 +29,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # AOSP Permissions
 PRODUCT_COPY_FILES += \
@@ -88,6 +82,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
+
+# API level
+BOARD_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -143,8 +141,6 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
-
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
@@ -211,10 +207,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     disable_configstore
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -381,6 +373,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
@@ -393,7 +388,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
-# Remove Unwanted Packages
+# Remove Packages
 PRODUCT_PACKAGES += \
     RemovePackages
 
@@ -439,12 +434,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/qcom-caf/bootctrl \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi
-
-# SystemUI
-EXCLUDE_SYSTEMUI_TESTS := true
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -519,3 +512,6 @@ PRODUCT_BOOT_JARS += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
