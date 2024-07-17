@@ -772,32 +772,32 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Graphics Adreno - from v757 by tryigit
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libadreno_app_profiles.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qgl.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qgl.so
+vendor/lib/egl/eglSubDriverAndroid.so|9f76906266649d5c8bb98c693c9dbfa87e06d720
+vendor/lib/egl/libEGL_adreno.so|00675b9ebff3fc836e166ef22991d12684bc0448
+vendor/lib/egl/libGLESv1_CM_adreno.so|1d7f7b8bc6b177cd7eb3205212f7d20fa6db04a4
+vendor/lib/egl/libGLESv2_adreno.so|b8080669f8a7139d3d7febb71e1fe287a934f163
+vendor/lib/egl/libq3dtools_adreno.so|323e297790439794d50c0a2901e5129de2bdef4e
+vendor/lib/egl/libq3dtools_esx.so|e8138832bb59fae3f7a9ead2db5e3eedd95fd820
+vendor/lib/libC2D2.so|909c06c3f780da8ea77e8bd0e328e444db19aefd
+vendor/lib/libadreno_app_profiles.so|a8852a9a2bf934401f0d0c4d7b79687dad3a100e
+vendor/lib/libadreno_utils.so|125545343b3d7e2f65bddac3b1aa33e1794d9172
+vendor/lib/libc2d30_bltlib.so|64d8012ee00227cf3bafc0f510e1daac3d0215f2
+vendor/lib/libgsl.so|fcb25c397cef45a30239d82355815536c91d94e8
+vendor/lib/libllvm-glnext.so|a71bf7c86c1d7e0f983712827d662fdf35ec3f7d
+vendor/lib/libllvm-qgl.so|b6d221cccc7fc1d64628ba7edf22f11197062191
+vendor/lib64/egl/eglSubDriverAndroid.so|0acaba7a64fb3522af5119bcdf50c12bda8e3d11
+vendor/lib64/egl/libEGL_adreno.so|6960a3645afe097a25dd1d2bf7914a804ba2e787
+vendor/lib64/egl/libGLESv1_CM_adreno.so|d02fd3da6d3135f4aeccabb2a861e11650e7d8e9
+vendor/lib64/egl/libGLESv2_adreno.so|ac20806e23e3c56b471fdd34dc369a9707ccb376
+vendor/lib64/egl/libq3dtools_adreno.so|2d698f5d23a324871f91f173418e1775948baf0c
+vendor/lib64/egl/libq3dtools_esx.so|ed4bb351c0475a193ff2c90c1a735d801bfda57f
+vendor/lib64/libC2D2.so|f4f572f85fdd2dd741112060a8fdf49cb646a91d
+vendor/lib64/libadreno_app_profiles.so|e40e50eda680458a6016b71f4c00ec8a891ae9cf
+vendor/lib64/libadreno_utils.so|2b75abcaba8e0801e878201328126e0b67689459
+vendor/lib64/libc2d30_bltlib.so|46512132c1ba8f72d58b19ec3e754503fa1653d6
+vendor/lib64/libgsl.so|c914c3fde7c6c98e7f5388802074953c5588b4e2
+vendor/lib64/libllvm-glnext.so|0a2bae6ec3516e396deb7810b0a45ec2bbd0a22a
+vendor/lib64/libllvm-qgl.so|44f2e97ab4436be6abef27b2684b3ec6349b0294
 
 # Graphics Adreno
 vendor/lib/libCB.so
@@ -812,16 +812,16 @@ vendor/lib64/libgpudataproducer.so
 vendor/lib64/libllvm-qcom.so
 
 # Graphic Firmware
-vendor/firmware/a610_zap.b00
-vendor/firmware/a610_zap.b01
-vendor/firmware/a610_zap.b02
-vendor/firmware/a610_zap.elf
-vendor/firmware/a610_zap.mdt
-vendor/firmware/a630_sqe.fw
+vendor/firmware/a610_zap.b00|cdc0262ea8bc3fa3796be6150cd5430abeeeab8d
+vendor/firmware/a610_zap.b01|419ec97f7c140bff4734b2432395cf39f80bd7a7
+vendor/firmware/a610_zap.b02|a29356777d8a39fde907ee051a8a2fd1eea28c23
+vendor/firmware/a610_zap.elf|5a9db022d94da84916ed6d23fdcb69ea5124bcdd
+vendor/firmware/a610_zap.mdt|6d481dcf8fab85a3601d659a9be63fa656a9843b
+vendor/firmware/a630_sqe.fw|09a86618d0c8282bba3ed85774e9841fb3230826
 
 # Graphics Vulkan - from v757 by tryigit
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
+vendor/lib/hw/vulkan.adreno.so|9f4fd884bb4e947264487f396b9c747b660c30a7
+vendor/lib64/hw/vulkan.adreno.so|70944c6f369d720274165d5839e5202ffd3eb727
 
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
@@ -1024,48 +1024,48 @@ vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
 # Perf - Moto SM6225
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
-vendor/lib/libqti-perfd-client.so
-vendor/lib64/libadaptlaunch.so
-vendor/lib64/libappclassifier.so
-vendor/lib64/libgameoptfeature.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libmeters.so
-vendor/lib64/liblmutils-ns.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|291e84c428907c663a48dd40a6a304e3e7112b8f
+vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
+vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
+vendor/etc/lm/AppClassifierFeature.xml|487853eb2d328d46db61a31e0e2790957b5f7dd8
+vendor/etc/lm/GameOptimizationFeature.xml|919465873754a60d5ee6ff45aa23dfc65e9b552a
+vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d261c
+vendor/etc/perf/perfboostsconfig.xml|f35e9f6f97e1995d967f7cd469ac77c5fb68c80c
+vendor/etc/perf/perfconfigstore.xml|9f451ace19cb4a678f681fe05de8b3c509055a06
+vendor/etc/perf/targetconfig.xml|da5a8fb1c5e6a2d8a90405d003654de81e620705
+vendor/etc/perf/targetresourceconfigs.xml|8db55c086a7ee91d932bdf367f1dac73943f4659
+vendor/etc/powerhint.xml|3be6431e65cec1cf099cebf2e88e6c404ded796b
+vendor/lib/libqti-perfd-client.so|f5079a0428b718d596d16c2de4bd028665cc7028
+vendor/lib64/libadaptlaunch.so|24faea413ecf3053178cb771bd6a3670193ced96
+vendor/lib64/libappclassifier.so|0f29372bc719717629196de115843c9a208c8f28
+vendor/lib64/libgameoptfeature.so|6cad82591a0fe8ddfe8d78039a853fc1aeae94f8
+vendor/lib64/liblearningmodule.so|7f67a39fa9e0e6f025f6c83781e0285fd761c8ab
+vendor/lib64/liblmutils-ns.so|0d1646bb3a82d164789d8b5e3c44b6e85b0d906e
+vendor/lib64/libmeters-ns.so|66048f7d24af9c0042180dcc4a96e8c33e13d05b
+vendor/lib64/libmeters.so|9cf308332932a90fdf9390a1a4a140746451a522
+vendor/lib64/libperfconfig.so|8f8763223e748a6ddda1cf21c5d9c6c722bbab3c
+vendor/lib64/libperfgluelayer.so|c10bb3139e9876523336af6978334cd651fe5fcc
+vendor/lib64/libperfioctl.so|dfc454663c7a0814d16cf3123af94a12de794363
+vendor/lib64/libqti-perfd-client.so|04d2b99bc9e87953985e29dd55f732f99a3c37a2
+vendor/lib64/libqti-perfd.so|5c9e1e36f629bed121c1c04160bac970fb7c4a26
+vendor/lib64/libqti-util.so|f950c1fe75f8e02e0bc0febb1657d05327ea93e5
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|ca5279dcef45ac862945067004ddb5201db3afc9
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|6fa9d012b0d44fd6e580e7ca7212deafdd378306
 
 # Perf-IOP - Moto SM6225
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|cf2043d3047237458692c1b2a0f43f274fc93951
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
+vendor/lib64/libqti-iopd-client.so|c59f9a3d6598ec5b2693569e85aefe46501ed13b
+vendor/lib64/libqti-iopd.so|92cb8569f017bea1e54fec5ce198e6771ca63e57
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|46137df8ff9251ec1c83c642ac5e74f8b5898113
 
 # Perf - QSPM - Moto SM6225
-vendor/bin/vendor.qti.qspmhal@1.0-service
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-vendor/etc/seccomp_policy/qspm.policy
-vendor/lib/vendor.qti.qspmhal@1.0.so
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
+vendor/bin/vendor.qti.qspmhal@1.0-service|ac1c898683786dba373e76d63e31b62e138c1695
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
+vendor/etc/seccomp_policy/qspm.policy|1644e78aa55edb2340e38072be542e4d016f3fc4
+vendor/lib/vendor.qti.qspmhal@1.0.so|a764daf0fa5f3b732060207b9b60e0ddbecf917e
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
+vendor/lib64/vendor.qti.qspmhal@1.0.so|4e066123b18a07bbeea6f47fcf1feecc8435141a
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -1129,6 +1129,8 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-vendor/app/IWlanService/IWlanService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1137,8 +1139,6 @@ system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/qcrilhook.jar
 system_ext/framework/qti-telephony-common.jar
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
@@ -1229,8 +1229,8 @@ vendor/radio/qcril_database/upgrade/16_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/17_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/18_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/19_version_update_ecc_table.sql
-vendor/radio/qcril_database/upgrade/20_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
+vendor/radio/qcril_database/upgrade/20_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
@@ -1365,8 +1365,8 @@ vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
 vendor/bin/mi_thermald
 
 # Thermal configs - rework by etylix
-vendor/etc/thermal-normal.conf
-vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-normal.conf|9c95c0ec7aacfc7669b7e07eec2b147c9cc27070
+vendor/etc/thermal-tgame.conf|585f1cebc119202b62577956e92a2152e8ff1149
 
 # Thermal configs
 vendor/etc/thermal-4k.conf
