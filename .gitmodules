@@ -1,0 +1,4 @@
+[submodule "hals/display"]
+	path = hals/display
+	url = https://github.com/Kajal4414/hardware_qcom-caf_bengal_display.git
+	branch = 13.0
