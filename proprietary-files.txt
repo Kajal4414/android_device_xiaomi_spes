@@ -1,6 +1,14 @@
 # All unpinned blobs below are extracted from miui_SPESINGlobal_OS1.0.2.0.TGCINXM_f57d472765_13.0
 
 # ACDB
+vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_Global_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_Handset_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_Hdmi_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
+vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_General_cal.acdb
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Global_cal.acdb
@@ -17,18 +25,10 @@ vendor/etc/acdbdata/IDP/india/INDIA_Hdmi_cal.acdb
 vendor/etc/acdbdata/IDP/india/INDIA_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/india/INDIA_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/india/INDIA_workspaceFile.qwsp
-vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_Global_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_Handset_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_Hdmi_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
-vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
-vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP
 vendor/bin/adsprpcd
@@ -78,8 +78,8 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT+
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/com.dsi.ant@1.0.so
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio Firmware
 vendor/firmware/aw87xxx_acf.bin
@@ -137,10 +137,10 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
 # Bluetooth (A2DP)
+vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
@@ -393,12 +393,6 @@ vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
 
 # Camera Configs
-vendor/etc/camera/model/dof_model/capture_cache
-vendor/etc/camera/model/dof_model/capture_model
-vendor/etc/camera/model/dof_model/capture_policy
-vendor/etc/camera/model/rt_model/preview_cache
-vendor/etc/camera/model/rt_model/preview_model
-vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/102_SummerDay.png
 vendor/etc/camera/103_Fantasy.png
 vendor/etc/camera/104_Meet.png
@@ -428,6 +422,12 @@ vendor/etc/camera/hdrcheckerparamsettings.yml
 vendor/etc/camera/intsense_config_undistort.bin
 vendor/etc/camera/mibokeh_712_opencl.bin
 vendor/etc/camera/mibokeh_712_parameter.bin
+vendor/etc/camera/model/dof_model/capture_cache
+vendor/etc/camera/model/dof_model/capture_model
+vendor/etc/camera/model/dof_model/capture_policy
+vendor/etc/camera/model/rt_model/preview_cache
+vendor/etc/camera/model/rt_model/preview_model
+vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/morpho_lowlight_2.0_aac_gc02m1_macro_global.xml
 vendor/etc/camera/morpho_lowlight_2.0_aac_gc02m1_macro_india.xml
 vendor/etc/camera/morpho_lowlight_2.0_aac_gc08a3_ultra_global.xml
@@ -491,12 +491,14 @@ vendor/lib64/libsysmon_cdsp_skel.so
 system/bin/charger:system/bin/chargeonlymode
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
@@ -524,8 +526,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-vendor/etc/cne/mwqem.conf
-vendor/etc/cne/profileMwqem.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/lib64/libcne.so
@@ -561,17 +561,17 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Display Calibration
 vendor/bin/qdcmss
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/init/qdcmss.rc
 vendor/etc/SVIConfig.xml
+vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/dsi_panel_k7_38_0c_0a_fhdp_video_display_mi.xml
 vendor/etc/dsi_panel_k7_38_0c_0b_fhdp_video_display_mi.xml
+vendor/etc/init/qdcmss.rc
 vendor/etc/qdcm_calib_data_k7_38_0c_0a_video_mode_fhdp_dsi_panel.xml|cd0e9be0c6a80374ea005bc153f135d1ef413ad8
 vendor/etc/qdcm_calib_data_k7_38_0c_0b_video_mode_fhdp_dsi_panel.xml|15c95cf48a213d0c66759a13fc4877a20a543a84
 
 # Displayfeature
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/bin/displayfeature
+vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
@@ -610,7 +610,6 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
@@ -629,6 +628,7 @@ system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
+-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -665,9 +665,9 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
-vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
@@ -688,8 +688,6 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GNSS
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -698,12 +696,14 @@ vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
+vendor/etc/cacert_location.pem
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
-vendor/etc/cacert_location.pem
+-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
+-vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
@@ -911,9 +911,9 @@ vendor/firmware/scuba_ipa_fws.mdt
 vendor/bin/msm_irqbalance
 
 # Keymaster
--vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+-vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
@@ -964,12 +964,12 @@ vendor/lib/libdsd2pcm.so
 vendor/lib/libswvdec.so
 
 # Mlipay
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
 vendor/bin/mlipayd@1.1
 vendor/bin/mtd@1.3
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
+-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
 vendor/lib64/libmfido.so
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
@@ -985,9 +985,9 @@ vendor/lib/modules/modules.load
 vendor/lib/modules/modules.softdep
 
 # Neural networks
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
@@ -1068,8 +1068,8 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
-vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/sec_config
+vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -1113,8 +1113,6 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--vendor/app/IWlanService/IWlanService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1123,9 +1121,11 @@ system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/qcrilhook.jar
 system_ext/framework/qti-telephony-common.jar
-vendor/bin/hw/qcrild
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
+vendor/bin/hw/qcrild
 vendor/bin/ks
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
@@ -1202,6 +1202,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql
@@ -1223,16 +1224,15 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
-vendor/radio/qcril_database/qcril.db
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
+vendor/etc/elliptic_sensor.xml
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/elliptic_sensor.xml
 vendor/lib64/hw/sensors.elliptic@2.0.so
 vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libsensorcal.so
@@ -1255,6 +1255,7 @@ vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors Config
+vendor/etc/sensor_diag.cfg
 vendor/etc/sensors/config/bengal_adux1050_0.json
 vendor/etc/sensors/config/bengal_bu27030_0.json
 vendor/etc/sensors/config/bengal_bu52053nvx_0.json
@@ -1310,16 +1311,14 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
-vendor/etc/sensor_diag.cfg
 
 # Secure element
 vendor/lib/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 
 # Snapdragon Computer Vision Engine
--vendor/lib/libfastcvopt.so
--vendor/lib64/libfastcvopt.so
 vendor/lib/libfastcvdsp_stub.so
+-vendor/lib/libfastcvopt.so
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
 vendor/lib/libscveObjectSegmentation.so
@@ -1327,6 +1326,7 @@ vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib64/libfastcvdsp_stub.so
+-vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1344,9 +1344,9 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
 
 # Thermal engine
+vendor/bin/mi_thermald
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
-vendor/bin/mi_thermald
 
 # Thermal configs - rework by etylix
 vendor/etc/thermal-normal.conf|9c95c0ec7aacfc7669b7e07eec2b147c9cc27070
@@ -1394,10 +1394,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # USB
--vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 vendor/bin/hw/android.hardware.usb@1.2-service-qti
 vendor/bin/init.mi.usb.sh
 vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
+-vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # VPP
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
@@ -1406,14 +1406,14 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # Widevine DRM
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
-vendor/lib64/mediadrm/libwvdrmengine.so
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
@@ -1422,7 +1422,6 @@ vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display
 -system/framework/WfdCommon.jar
--system_ext/priv-app/WfdService/WfdService.apk
 system_ext/bin/wfdservice
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
@@ -1452,6 +1451,7 @@ system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libwfdclient.so
 system_ext/lib64/libwfdnative.so
+-system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
