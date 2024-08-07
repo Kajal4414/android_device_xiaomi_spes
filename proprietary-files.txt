@@ -1007,6 +1007,7 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
+<<<<<<< HEAD
 # Perf - Moto SM6225
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|291e84c428907c663a48dd40a6a304e3e7112b8f
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
@@ -1051,6 +1052,8 @@ vendor/lib/vendor.qti.qspmhal@1.0.so|a764daf0fa5f3b732060207b9b60e0ddbecf917e
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
 vendor/lib64/vendor.qti.qspmhal@1.0.so|4e066123b18a07bbeea6f47fcf1feecc8435141a
 
+=======
+>>>>>>> 6472274e (spes: Drop QTI perfd stack)
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
