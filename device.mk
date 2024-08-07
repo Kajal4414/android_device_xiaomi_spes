@@ -235,7 +235,9 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    com.fingerprints.extension@1.0.vendor \
+    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.goodix.hardware.fingerprintextension@1.0.vendor
 
 # FM
 PRODUCT_PACKAGES += \
