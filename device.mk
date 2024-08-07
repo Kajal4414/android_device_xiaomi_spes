@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
 # API level
-BOARD_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
