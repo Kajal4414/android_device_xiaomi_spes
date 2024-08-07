@@ -994,50 +994,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
-# Perf - Moto SM6225
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|291e84c428907c663a48dd40a6a304e3e7112b8f
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
-vendor/etc/lm/AppClassifierFeature.xml|487853eb2d328d46db61a31e0e2790957b5f7dd8
-vendor/etc/lm/GameOptimizationFeature.xml|919465873754a60d5ee6ff45aa23dfc65e9b552a
-vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d261c
-vendor/etc/perf/perfboostsconfig.xml|f35e9f6f97e1995d967f7cd469ac77c5fb68c80c
-vendor/etc/perf/perfconfigstore.xml|9f451ace19cb4a678f681fe05de8b3c509055a06
-vendor/etc/perf/targetconfig.xml|da5a8fb1c5e6a2d8a90405d003654de81e620705
-vendor/etc/perf/targetresourceconfigs.xml|8db55c086a7ee91d932bdf367f1dac73943f4659
-vendor/etc/powerhint.xml|3be6431e65cec1cf099cebf2e88e6c404ded796b
-vendor/lib/libqti-perfd-client.so|f5079a0428b718d596d16c2de4bd028665cc7028
-vendor/lib64/libadaptlaunch.so|24faea413ecf3053178cb771bd6a3670193ced96
-vendor/lib64/libappclassifier.so|0f29372bc719717629196de115843c9a208c8f28
-vendor/lib64/libgameoptfeature.so|6cad82591a0fe8ddfe8d78039a853fc1aeae94f8
-vendor/lib64/liblearningmodule.so|7f67a39fa9e0e6f025f6c83781e0285fd761c8ab
-vendor/lib64/liblmutils-ns.so|0d1646bb3a82d164789d8b5e3c44b6e85b0d906e
-vendor/lib64/libmeters-ns.so|66048f7d24af9c0042180dcc4a96e8c33e13d05b
-vendor/lib64/libmeters.so|9cf308332932a90fdf9390a1a4a140746451a522
-vendor/lib64/libperfconfig.so|8f8763223e748a6ddda1cf21c5d9c6c722bbab3c
-vendor/lib64/libperfgluelayer.so|c10bb3139e9876523336af6978334cd651fe5fcc
-vendor/lib64/libperfioctl.so|dfc454663c7a0814d16cf3123af94a12de794363
-vendor/lib64/libqti-perfd-client.so|04d2b99bc9e87953985e29dd55f732f99a3c37a2
-vendor/lib64/libqti-perfd.so|5c9e1e36f629bed121c1c04160bac970fb7c4a26
-vendor/lib64/libqti-util.so|f950c1fe75f8e02e0bc0febb1657d05327ea93e5
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|ca5279dcef45ac862945067004ddb5201db3afc9
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|6fa9d012b0d44fd6e580e7ca7212deafdd378306
-
-# Perf-IOP - Moto SM6225
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|cf2043d3047237458692c1b2a0f43f274fc93951
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
-vendor/lib64/libqti-iopd-client.so|c59f9a3d6598ec5b2693569e85aefe46501ed13b
-vendor/lib64/libqti-iopd.so|92cb8569f017bea1e54fec5ce198e6771ca63e57
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|46137df8ff9251ec1c83c642ac5e74f8b5898113
-
-# Perf-QSPM - Moto SM6225
-vendor/bin/vendor.qti.qspmhal@1.0-service|ac1c898683786dba373e76d63e31b62e138c1695
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
-vendor/etc/seccomp_policy/qspm.policy|1644e78aa55edb2340e38072be542e4d016f3fc4
-vendor/lib/vendor.qti.qspmhal@1.0.so|a764daf0fa5f3b732060207b9b60e0ddbecf917e
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
-vendor/lib64/vendor.qti.qspmhal@1.0.so|4e066123b18a07bbeea6f47fcf1feecc8435141a
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -1089,6 +1045,13 @@ vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
+
+# QSP
+vendor/bin/vendor.qti.qspmhal@1.0-service
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
+vendor/etc/seccomp_policy/qspm.policy
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
