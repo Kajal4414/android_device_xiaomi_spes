@@ -18,16 +18,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 
 AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
+    POSTINSTALL_OPTIONAL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    RUN_POSTINSTALL_system=true
 
 AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
+    POSTINSTALL_OPTIONAL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    RUN_POSTINSTALL_vendor=true
 
 PRODUCT_PACKAGES += \
     checkpoint_gc \
@@ -91,9 +91,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
@@ -123,17 +123,17 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1 \
-    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hardware.bluetooth.a2dp@1.0.vendor \
+    android.hardware.bluetooth@1.1 \
+    android.hardware.bluetooth@1.1.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Bootanimation
-TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -152,8 +152,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libgui_vendor \
-    libpng.vendor \
     libpiex_shim \
+    libpng.vendor \
     libstdc++_vendor
 
 PRODUCT_PACKAGES += \
@@ -172,9 +172,9 @@ PRODUCT_PACKAGES += \
 
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 USE_DEX2OAT_DEBUG := false
 
 # Display
@@ -186,8 +186,8 @@ PRODUCT_PACKAGES += \
     memtrack.bengal
 
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.14 \
     vendor.display.config@1.11.vendor \
+    vendor.display.config@1.14 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
@@ -216,8 +216,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.4.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -271,8 +271,8 @@ PRODUCT_COPY_FILES += \
 
 # IPACM
 PRODUCT_PACKAGES += \
-    ipacm \
     IPACM_cfg.xml \
+    ipacm \
     libipanat \
     liboffloadhal
 
@@ -317,8 +317,8 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libstagefright_omx.vendor
+    libstagefright_omx.vendor \
+    libstagefrighthw
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
@@ -351,8 +351,8 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.st \
     com.android.nfc_extras \
     libchrome.vendor \
-    nfc_nci.st21nfc.default \
     NfcNci \
+    nfc_nci.st21nfc.default \
     SecureElement \
     Tag
 
@@ -367,20 +367,17 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor \
+    android.hardware.power-V1-ndk_platform.vendor \
     android.hardware.power-service.lineage-libperfmgr \
-    android.hardware.power-V1-ndk_platform.vendor
+    android.hardware.power@1.3.vendor \
+    libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -407,9 +404,9 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.6.vendor \
     android.hardware.secure_element@1.2.vendor \
     libcurl.vendor \
     libprocessgroup.vendor \
@@ -453,7 +450,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/qcom-caf/bootctrl \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
@@ -470,10 +466,10 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
     qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
+    qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
     qti_telephony_utils.xml \
     telephony-ext
 
@@ -506,16 +502,16 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
-    firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlan_mac.bin_symlink
 
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    libwpa_client \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     WifiResCommon \
