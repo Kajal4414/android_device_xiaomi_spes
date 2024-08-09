@@ -42,10 +42,6 @@ on early-init
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
-    # Workarround for cache
-    rm /data/resource-cache
-    rm /data/system/package_cache 
-
 on init
     #disable absolute volume
     setprop  persist.bluetooth.disableabsvol true
@@ -406,3 +402,8 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     task_profiles ProcessCapacityHigh HighPerformance
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
