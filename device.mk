@@ -379,7 +379,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
     android.hardware.power-service.lineage-libperfmgr \
-    android.hardware.power-service-qti \
     android.hardware.power-V1-ndk_platform.vendor
 
 PRODUCT_COPY_FILES += \
