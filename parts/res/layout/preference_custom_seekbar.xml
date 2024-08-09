@@ -24,7 +24,7 @@
     android:background="?android:attr/activatedBackgroundIndicator"
     android:clipToPadding="false">
 
-    <include layout="@layout/settingslib_icon_frame" />
+    <include layout="@layout/settingslib_icon_frame"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/summary"
-            android:layout_alignStart="@android:id/title">
+            android:layout_alignStart="@android:id/title" >
 
             <TextView
                 android:id="@+id/value"
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/value_frame"
-            android:layout_alignStart="@android:id/title">
+            android:layout_alignStart="@android:id/title" >
 
             <ImageView
                 android:id="@+id/minus"

@@ -1,7 +1,12 @@
 soong_namespace {
-    imports: [
-        "hardware/qcom-caf/bootctrl",
-    ],
+     imports: [
+          "hardware/google/interfaces",
+          "hardware/google/pixel",
+          "hardware/qcom-caf/bootctrl",
+          "hardware/qcom-caf/common/libqti-perfd-client",
+          "hardware/lineage/interfaces/power-libperfmgr",
+          "hardware/xiaomi"
+     ],
 }
 
 install_symlink {

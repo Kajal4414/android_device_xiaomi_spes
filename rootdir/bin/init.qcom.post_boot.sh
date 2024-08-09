@@ -28,17 +28,36 @@
 #
 
 function configure_read_ahead_kb_values() {
-    echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-    echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
 
     dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
-    for dm in $dmpts; do
-        echo 512 > $dm
-    done
+
+    # Set 128 for <= 3GB &
+    # set 512 for >= 4GB targets.
+    if [ $MemTotal -le 3145728 ]; then
+        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+        for dm in $dmpts; do
+            echo 128 > $dm
+        done
+    else
+        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+        for dm in $dmpts; do
+            echo 512 > $dm
+        done
+    fi
 }
 
-# Set read ahead parameters
-configure_read_ahead_kb_values
+# Check for less than 4GB RAM and set 200 swappiness
+    if [ "$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')" -le "4194304" ]; then
+        # Set swappiness to 200
+        echo 200 > /proc/sys/vm/swappiness
+    else
+        # Set swappiness to 100 for more than 4gb RAM
+        echo 100 > /proc/sys/vm/swappiness
+    fi
 
 # Apply Settings for bengal
 # fix ECC Crash
@@ -57,6 +76,7 @@ echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
 echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
+
 
 # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
 echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost

@@ -1,6 +1,6 @@
 on post-fs-data
-    mkdir /data/vendor/nfc 0770 nfc nfc
-
+    mkdir /data/vendor/nfc 0770 nfc nfc 
+	
 service stflashtool /vendor/bin/STFlashTool
     class late_start
     group nfc
