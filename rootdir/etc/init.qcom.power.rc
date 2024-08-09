@@ -46,8 +46,8 @@ on property:sys.boot_completed=1
 
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/foreground/cpus 0-2,5-7
+    write /dev/cpuset/background/cpus 2-3
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
@@ -65,7 +65,7 @@ on property:sys.boot_completed=1
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
-    
+
     # Configure scheduler
     write /proc/sys/kernel/sched_upmigrate "65 85"
     write /proc/sys/kernel/sched_downmigrate "60 75"
@@ -94,13 +94,13 @@ on early-init
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 1344000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rtg_boost_freq 0
-    
+
     # Input boost settings
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1190000"
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq "0:1900800 1:0 2:0 3:0 4:2400000 5:0 6:0 7:0"
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms 400
-    
+
     # Disable UFS clock scaling
     write /sys/bus/platform/devices/4804000.ufshc/clkscale_enable 0
 

@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from miui_SPESINGlobal_OS1.0.2.0.TGCINXM_f57d472765_13.0
+# All unpinned blobs below are extracted from SPESINGlobal_OS1.0.2.0.TGCINXM
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
@@ -654,6 +654,7 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
+vendor/lib64/libspl.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
@@ -721,6 +722,7 @@ vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
 vendor/lib64/libloc_core.so
+vendor/lib64/liblocdiagiface.so
 vendor/lib64/libloc_socket.so
 vendor/lib64/liblocation_api.so
 vendor/lib64/liblocationservice.so
@@ -753,57 +755,51 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# Graphics Adreno - from v757 by tryigit
-vendor/lib/egl/eglSubDriverAndroid.so|9f76906266649d5c8bb98c693c9dbfa87e06d720
-vendor/lib/egl/libEGL_adreno.so|00675b9ebff3fc836e166ef22991d12684bc0448;SYMLINK=vendor/lib/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so|1d7f7b8bc6b177cd7eb3205212f7d20fa6db04a4
-vendor/lib/egl/libGLESv2_adreno.so|b8080669f8a7139d3d7febb71e1fe287a934f163;SYMLINK=vendor/lib/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so|323e297790439794d50c0a2901e5129de2bdef4e;SYMLINK=vendor/lib/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so|e8138832bb59fae3f7a9ead2db5e3eedd95fd820
-vendor/lib/libC2D2.so|909c06c3f780da8ea77e8bd0e328e444db19aefd
-vendor/lib/libadreno_app_profiles.so|a8852a9a2bf934401f0d0c4d7b79687dad3a100e
-vendor/lib/libadreno_utils.so|125545343b3d7e2f65bddac3b1aa33e1794d9172
-vendor/lib/libc2d30_bltlib.so|64d8012ee00227cf3bafc0f510e1daac3d0215f2
-vendor/lib/libgsl.so|fcb25c397cef45a30239d82355815536c91d94e8
-vendor/lib/libllvm-glnext.so|a71bf7c86c1d7e0f983712827d662fdf35ec3f7d
-vendor/lib/libllvm-qgl.so|b6d221cccc7fc1d64628ba7edf22f11197062191
-vendor/lib64/egl/eglSubDriverAndroid.so|0acaba7a64fb3522af5119bcdf50c12bda8e3d11
-vendor/lib64/egl/libEGL_adreno.so|6960a3645afe097a25dd1d2bf7914a804ba2e787;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so|d02fd3da6d3135f4aeccabb2a861e11650e7d8e9
-vendor/lib64/egl/libGLESv2_adreno.so|ac20806e23e3c56b471fdd34dc369a9707ccb376;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so|2d698f5d23a324871f91f173418e1775948baf0c;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so|ed4bb351c0475a193ff2c90c1a735d801bfda57f
-vendor/lib64/libC2D2.so|f4f572f85fdd2dd741112060a8fdf49cb646a91d
-vendor/lib64/libadreno_app_profiles.so|e40e50eda680458a6016b71f4c00ec8a891ae9cf
-vendor/lib64/libadreno_utils.so|2b75abcaba8e0801e878201328126e0b67689459
-vendor/lib64/libc2d30_bltlib.so|46512132c1ba8f72d58b19ec3e754503fa1653d6
-vendor/lib64/libgsl.so|c914c3fde7c6c98e7f5388802074953c5588b4e2
-vendor/lib64/libllvm-glnext.so|0a2bae6ec3516e396deb7810b0a45ec2bbd0a22a
-vendor/lib64/libllvm-qgl.so|44f2e97ab4436be6abef27b2684b3ec6349b0294
-
 # Graphics Adreno
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
 vendor/lib/libVkLayer_q3dtools.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgpudataproducer.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libVkLayer_q3dtools.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
 # Graphic Firmware
-vendor/firmware/a610_zap.b00|cdc0262ea8bc3fa3796be6150cd5430abeeeab8d
-vendor/firmware/a610_zap.b01|419ec97f7c140bff4734b2432395cf39f80bd7a7
-vendor/firmware/a610_zap.b02|a29356777d8a39fde907ee051a8a2fd1eea28c23
-vendor/firmware/a610_zap.elf|5a9db022d94da84916ed6d23fdcb69ea5124bcdd
-vendor/firmware/a610_zap.mdt|6d481dcf8fab85a3601d659a9be63fa656a9843b
-vendor/firmware/a630_sqe.fw|09a86618d0c8282bba3ed85774e9841fb3230826
+vendor/firmware/a610_zap.b00
+vendor/firmware/a610_zap.b01
+vendor/firmware/a610_zap.b02
+vendor/firmware/a610_zap.elf
+vendor/firmware/a610_zap.mdt
+vendor/firmware/a630_sqe.fw
 
-# Graphics Vulkan - from v757 by tryigit
-vendor/lib/hw/vulkan.adreno.so|9f4fd884bb4e947264487f396b9c747b660c30a7
-vendor/lib64/hw/vulkan.adreno.so|70944c6f369d720274165d5839e5202ffd3eb727
+# Graphics Vulkan
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.adreno.so
 
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
@@ -976,12 +972,6 @@ vendor/lib64/libwvkeybox.so
 vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.3.so
 
-# Modules
-vendor/lib/modules/modules.alias
-vendor/lib/modules/modules.dep
-vendor/lib/modules/modules.load
-vendor/lib/modules/modules.softdep
-
 # Neural networks
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
@@ -1067,8 +1057,6 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--vendor/app/IWlanService/IWlanService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1077,6 +1065,8 @@ system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/qcrilhook.jar
 system_ext/framework/qti-telephony-common.jar
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
@@ -1167,8 +1157,8 @@ vendor/radio/qcril_database/upgrade/16_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/17_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/18_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/19_version_update_ecc_table.sql
-vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/20_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
@@ -1302,10 +1292,6 @@ vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
 -vendor/lib64/libthermalclient.so
 vendor/bin/mi_thermald
 
-# Thermal configs - rework by etylix
-vendor/etc/thermal-normal.conf|9c95c0ec7aacfc7669b7e07eec2b147c9cc27070
-vendor/etc/thermal-tgame.conf|585f1cebc119202b62577956e92a2152e8ff1149
-
 # Thermal configs
 vendor/etc/thermal-4k.conf
 vendor/etc/thermal-arvr.conf
@@ -1316,7 +1302,9 @@ vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermal-navigation.conf
 vendor/etc/thermal-nolimits.conf
+vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
+vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-video.conf
 vendor/etc/thermal-videochat.conf
 vendor/etc/thermal-youtube.conf

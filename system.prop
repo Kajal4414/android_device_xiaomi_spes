@@ -22,29 +22,21 @@ persist.vendor.cne.feature=1
 
 # Camera
 camera.disable_zsl_mode=1
+vendor.camera.aux.packagelist=com.android.camera,app.grapheneos.camera,org.lineageos.aperture,org.lineageos.aperture.dev
 
 # Charger
 persist.vendor.quick.charge=1
 ro.charger.enable_suspend=1
 
 # Dex
-dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.dex2oat-threads=8
 dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.image-dex2oat-threads=8
-dalvik.vm.systemuicompilerfilter=speed
-ro.sys.fw.dex2oat_thread_count=8
-ro.vendor.qti.am.reschedule_service=true
 
 # Display
 debug.sf.enable_hwc_vds=1
 persist.demo.hdmirotationlock=false
 
 # FP
+sys.fp.miui.token=0
 ro.hardware.fp.sideCap=true
 
 # Feature Flag
@@ -84,18 +76,14 @@ persist.log.tag.ContrastColorUtil=S
 persist.log.tag.IntervalStats=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S
 persist.log.tag.NearbySharing=S
-persist.log.tag.OpenGLRenderer=S
 persist.log.tag.SQLiteLog=S
 persist.log.tag.Tracer=S
 persist.log.tag.TrafficStats=S
-persist.log.tag.a2dp_codec=S
-persist.log.tag.vendor.qti.bluetooth@1.0-ibs_handler=S
 persist.log.tag.wificond=S
 
 # Media
 media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_khaje.xml
-media.stagefright.audio.deep=false
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true
@@ -105,11 +93,13 @@ media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
-ro.media.recorder-max-base-layer-fps=60
 
 # Mobile Data
 ro.com.android.dataroaming=false
 ro.com.android.mobiledata=false
+
+# MTE
+persist.arm64.memtag.system_server=off
 
 # NFC DT
 ro.nfc.port=I2C
@@ -149,9 +139,6 @@ debug.hwui.renderer=skiavk
 debug.hwui.skia_atrace_enabled=false
 debug.renderengine.backend=skiavkthreaded
 renderthread.skia.reduceopstasksplitting=true
-
-# System Server
-arm64.memtag.process.system_server=off
 
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
