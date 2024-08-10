@@ -13,7 +13,6 @@ ro.bluetooth.wipower=false
 # Blur
 persist.sys.sf.disable_blurs=1
 persist.sysui.disableBlur=true
-ro.launcher.blur.appLaunch=0
 ro.sf.blurs_are_expensive=0
 ro.surface_flinger.supports_background_blur=0
 
