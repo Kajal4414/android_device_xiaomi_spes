@@ -8,7 +8,7 @@
         "1804800",
         "1516800",
         "1190400",
-        "940800"        
+        "940800"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -36,7 +36,6 @@
         "2000",
         "500"
       ],
-      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -76,7 +75,6 @@
         "2000",
         "500"
       ],
-      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -251,8 +249,8 @@
       "Name": "MLUclampBoost",
       "Path": "/dev/cpuctl/nnapi-hal/cpu.uclamp.min",
       "Values": [
-          "22.50",
-          "81.20"
+        "22.50",
+        "81.20"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -297,7 +295,7 @@
       "Values": [
         "1",
         "0"
-      ],
+      ]
     },
     {
       "Name": "PowerHALMainState",
@@ -508,36 +506,36 @@
       "Value": "LAUNCH_EXTEND"
     },
     {
-       "PowerHint": "LAUNCH_EXTEND",
-       "Node": "CPUBigClusterMaxFreq",
-       "Duration": 2000,
-       "Value": "2400000"
-     },
-     {
-       "PowerHint": "LAUNCH_EXTEND",
-       "Node": "CPULittleClusterMaxFreq",
-       "Duration": 2000,
-       "Value": "1900800"
-     },
-     {
-       "PowerHint": "LAUNCH_EXTEND",
-       "Node": "BGUClampMaxBoost",
-       "Duration": 2000,
-       "Value": "51.20"
-     },
-     {
-       "PowerHint": "LAUNCH_EXTEND",
-       "Node": "Dex2oatUClampMaxBoost",
-       "Duration": 2000,
-       "Value": "60.50"
-     },
-     {
-       "PowerHint": "LAUNCH_EXTEND",
-       "Node": "CPULittleClusterDownRateLimitUs",
-       "Duration": 2000,
-       "Value": "5000"
-     },
-     {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 2000,
+      "Value": "2400000"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 2000,
+      "Value": "1900800"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "BGUClampMaxBoost",
+      "Duration": 2000,
+      "Value": "51.20"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "Dex2oatUClampMaxBoost",
+      "Duration": 2000,
+      "Value": "60.50"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "CPULittleClusterDownRateLimitUs",
+      "Duration": 2000,
+      "Value": "5000"
+    },
+    {
       "PowerHint": "LAUNCH_EXTEND",
       "Node": "CPUBigClusterDownRateLimitUs",
       "Duration": 2000,
@@ -854,4 +852,3 @@
     }
   ]
 }
-
