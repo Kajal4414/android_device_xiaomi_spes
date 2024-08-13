@@ -503,9 +503,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
