@@ -135,6 +135,11 @@
         <fqname>@2.0::IImsCmService/qti.ims.connectionmanagerservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.memory.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IPasrManager/pasrhal</fqname>
+    </hal>
+    <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
