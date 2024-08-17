@@ -58,7 +58,7 @@ vendor.audio.feature.hifi_audio.enable=false
 vendor.audio.feature.hwdep_cal.enable=false
 vendor.audio.feature.incall_music.enable=true
 vendor.audio.feature.keep_alive.enable=true
-vendor.audio.feature.kpi_optimize.enable=true
+vendor.audio.feature.kpi_optimize.enable=false
 vendor.audio.feature.maxx_audio.enable=false
 vendor.audio.feature.multi_voice_session.enable=true
 vendor.audio.feature.ras.enable=true
@@ -214,9 +214,6 @@ debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 vendor.media.target.version=3
 vendor.sys.media.target.version=3
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
 
 # QSPM
 ro.vendor.qspm.enable=true
