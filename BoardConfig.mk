@@ -139,6 +139,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := spes,spesn
 
+# Malloc
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 # Media
 TARGET_DISABLED_UBWC := true
 TARGET_USES_ION := true
