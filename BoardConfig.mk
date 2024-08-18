@@ -140,6 +140,9 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 
+# Malloc
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 # Media
 TARGET_DISABLED_UBWC := true
 TARGET_USES_ION := true
