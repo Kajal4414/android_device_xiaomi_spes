@@ -33,37 +33,26 @@ function configure_zram_parameters() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
-    low_ram=`getprop ro.config.low_ram`
-
-    # Zram disk - 75% for Go devices.
-    # For 512MB Go device, size = 384MB, set same for Non-Go.
-    # For 1GB Go device, size = 768MB, set same for Non-Go.
-    # For 2GB Go device, size = 1536MB, set same for Non-Go.
-    # For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-    # And enable lz4 zram compression for Go targets.
-
-    let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-    diskSizeUnit=M
-    if [ $RamSizeGB -le 2 ]; then
-        let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-    else
-        let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
-    fi
-
-    # use MB avoid 32 bit overflow
-    if [ $zRamSizeMB -gt 4096 ]; then
-        let zRamSizeMB=4096
-    fi
-
-    if [ "$low_ram" == "true" ]; then
-        echo lz4 > /sys/block/zram0/comp_algorithm
-    fi
+    echo lz4 > /sys/block/zram0/comp_algorithm
+    echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
+    echo 0 > /proc/sys/vm/page-cluster
+    echo 100 > /proc/sys/vm/swappiness
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
             echo 1 > /sys/block/zram0/use_dedup
         fi
-        echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
+
+        if [ $MemTotal -le 4194304 ]; then
+            # 2GB ZRAM size with memory 4 GB
+            echo 2147483648 > /sys/block/zram0/disksize
+        elif [ $MemTotal -le 6291456 ]; then
+            # 3GB ZRAM size with memory 6 GB
+            echo 3221225472 > /sys/block/zram0/disksize
+        else
+            # 4GB ZRAM size with memory greater than 6GB
+            echo 4294967296 > /sys/block/zram0/disksize
+        fi
 
         # ZRAM may use more memory than it saves if SLAB_STORE_USER
         # debug option is enabled.
@@ -79,10 +68,8 @@ function configure_zram_parameters() {
     fi
 }
 
-# Enable ZRAM
+# Set ZRAM parameters
 configure_zram_parameters
-echo 0 > /proc/sys/vm/page-cluster
-echo 100 > /proc/sys/vm/swappiness
 
 function configure_read_ahead_kb_values() {
     echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
