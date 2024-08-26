@@ -130,12 +130,15 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 
-# OTA Assert
-TARGET_OTA_ASSERT_DEVICE := spes,spesn
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Media
 TARGET_DISABLED_UBWC := true
 TARGET_USES_ION := true
+
+# OTA Assert
+TARGET_OTA_ASSERT_DEVICE := spes,spesn
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
