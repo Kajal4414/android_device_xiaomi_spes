@@ -213,6 +213,9 @@ debug.stagefright.omx_default_rank=0
 vendor.media.target.version=3
 vendor.sys.media.target.version=3
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # QSPM
 ro.vendor.qspm.enable=true
 
