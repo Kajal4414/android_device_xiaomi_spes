@@ -1,0 +1,1 @@
+allow storaged vendor_sysfs_memory:dir search;
