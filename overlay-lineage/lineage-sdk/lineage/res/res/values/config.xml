@@ -25,14 +25,4 @@
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
     </string-array>
-
-    <!-- Whether charging control should be enabled by default -->
-    <bool name="config_chargingControlEnabled">true</bool>
-
-    <!-- Default charging control mode.
-         This integer should be set to:
-         1 - auto - Use the alarm to calculate the time range when to activate charging control
-         2 - custom - Use time range when the device is usually charging for hours
-         3 - limit - Just limit charging -->
-    <integer name="config_defaultChargingControlMode">3</integer>
 </resources>
