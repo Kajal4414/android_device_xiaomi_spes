@@ -208,6 +208,7 @@ vendor.gralloc.secure_preview_buffer_format=420_sp
 ro.incremental.enable=1
 
 # Media Codecs
+debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 vendor.media.target.version=3
