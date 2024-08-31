@@ -1,3 +1,2 @@
 allow surfaceflinger vendor_firmware_file:dir { getattr read open search };
-allow surfaceflinger vendor_firmware_file:file { read open };
 allow surfaceflinger sysfs_msm_subsys:dir search;
